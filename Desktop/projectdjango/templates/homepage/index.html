@@ -50,38 +50,46 @@
     <div id="extra">
         <div class="container">
             <div class="row no-collapse-1">
-                <section class="4u"> <a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt=""></a>
+                {% if homepage %}
+                  {% for home in homepage %}
+                <section class="4u"> <a href="#" class="image featured"><img src="{{ home.photo1.url }}" alt=""></a>
                     <div class="box">
-                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <p>{{home.description1}}</p>
                         <a href="#" class="button">Read More</a> </div>
                 </section>
-                <section class="4u"> <a href="#" class="image featured"><img src="{% static 'images/pic02.jpg' %}" alt=""></a>
+                <section class="4u"> <a href="#" class="image featured"><img src="{{ home.photo2.url }}" alt=""></a>
                     <div class="box">
-                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <p>{{home.description2}}</p>
                         <a href="#" class="button">Read More</a> </div>
                 </section>
-                <section class="4u"> <a href="#" class="image featured"><img src="{% static 'images/pic03.jpg' %}" alt=""></a>
+                <section class="4u"> <a href="#" class="image featured"><img src="{{ home.photo3.url }}" alt=""></a>
                     <div class="box">
-                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <p>{{home.description3}}</p>
                         <a href="#" class="button">Read More</a> </div>
                 </section>
+                   {% endfor %}
+                {% endif%}
             </div>
             <div class="row no-collapse-1">
-                <section class="4u"> <a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt=""></a>
+                {% if homepage %}
+                   {% for home in homepage %}
+                <section class="4u"> <a href="#" class="image featured"><img src="{{ home.photo4.url }}" alt=""></a>
                     <div class="box">
-                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <p>{{home.description4}}</p>
                         <a href="#" class="button">Read More</a> </div>
                 </section>
-                <section class="4u"> <a href="#" class="image featured"><img src="{% static 'images/pic02.jpg' %}" alt=""></a>
+                <section class="4u"> <a href="#" class="image featured"><img src="{{ home.photo5.url }}" alt=""></a>
                     <div class="box">
-                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <p>{{home.description5}}</p>
                         <a href="#" class="button">Read More</a> </div>
                 </section>
-                <section class="4u"> <a href="#" class="image featured"><img src="{% static 'images/pic03.jpg' %}" alt=""></a>
+                <section class="4u"> <a href="#" class="image featured"><img src="{{ home.photo6.url }}" alt=""></a>
                     <div class="box">
-                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <p>{{home.description6}}</p>
                         <a href="#" class="button">Read More</a> </div>
                 </section>
+                   {% endfor %}
+                {% endif%}
             </div>
         </div>
     </div>

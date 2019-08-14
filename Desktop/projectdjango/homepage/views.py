@@ -1,8 +1,13 @@
 from django.shortcuts import render
-
+from .models import Homepage
 
 def index(request):
-    return render(request, 'homepage/index.html')
+    homepage = Homepage.objects.all()
+    context = {
+        'homepage': homepage
+    }
+
+    return render(request, 'homepage/index.html', context)
 
 
 def leftsidebar(request):
