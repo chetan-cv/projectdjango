@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Django</title>
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'jquery.dropotron.min.js' %}"></script>
+    <script src="{% static 'skel.min.js' %}"></script>
+    <script src="{% static 'skel-layers.min.js' %}"></script>
+    <script src="{% static 'init.js' %}"></script>
+    <noscript>
+        <link rel="stylesheet" href="{% static 'css/skel.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/style-wide.css' %}" />
+    </noscript>
+</head>
+<body>
+{% block content %} {% endblock %}
+</body>
+</html>
