@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Homepage
 
+
 def index(request):
     homepage = Homepage.objects.all()
     context = {
